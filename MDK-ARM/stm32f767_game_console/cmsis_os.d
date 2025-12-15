@@ -1,19 +1,20 @@
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-stm32f767_game_console\cmsis_os.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-stm32f767_game_console\cmsis_os.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
-stm32f767_game_console\cmsis_os.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
-stm32f767_game_console\cmsis_os.o: ../Core/Inc/FreeRTOSConfig.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/portmacro.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
-stm32f767_game_console\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-stm32f767_game_console\cmsis_os.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+stm32f767_game_console/cmsis_os.o: \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM7\r0p1\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
+  ..\Drivers\CMSIS\Include\cmsis_gcc.h

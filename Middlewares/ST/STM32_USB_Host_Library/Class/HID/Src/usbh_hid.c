@@ -447,7 +447,6 @@ static USBH_StatusTypeDef USBH_HID_Process(USBH_HandleTypeDef *phost)
       HID_Handle->state = USBH_HID_POLL;
       HID_Handle->timer = phost->Timer;
       HID_Handle->DataReady = 0U;
-      //USBH_HID_EventCallback(phost);
       break;
 
     case USBH_HID_POLL:
@@ -896,23 +895,10 @@ uint16_t USBH_HID_FifoWrite(FIFO_TypeDef *f, void *buf, uint16_t  nbytes)
   *  @param  phost: Selected device
   * @retval None
   */
-void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
+__weak void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 {
   /* Prevent unused argument(s) compilation warning */
   UNUSED(phost);
-  HID_HandleTypeDef *hid;
-
-  hid = (HID_HandleTypeDef *)phost->pActiveClass->pData;
-
-  if (hid && hid->length)
-  {
-      printf("RAW HID: ");
-      for (int i = 0; i < hid->length; i++)
-          printf("%02X ", hid->pData[i]);
-      printf("\r\n");
-  }
-
-  return ;
 }
 /**
   * @}

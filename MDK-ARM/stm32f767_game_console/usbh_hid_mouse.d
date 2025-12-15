@@ -1,67 +1,79 @@
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid_mouse.c
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid_mouse.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h
-stm32f767_game_console\usbh_hid_mouse.o: ../USB_HOST/Target/usbh_conf.h
-stm32f767_game_console\usbh_hid_mouse.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
-stm32f767_game_console\usbh_hid_mouse.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
-stm32f767_game_console\usbh_hid_mouse.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Core/Inc/main.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Core/Inc/stm32f7xx_hal_conf.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Include/core_cm7.h
-stm32f767_game_console\usbh_hid_mouse.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Include/cmsis_version.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Include/mpu_armv7.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-stm32f767_game_console\usbh_hid_mouse.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc_ex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_exti.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio_ex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_hcd.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Core/Inc/FreeRTOSConfig.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/portmacro.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid_mouse.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid_keybd.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid_keybd.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid_parser.h
-stm32f767_game_console\usbh_hid_mouse.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc/usbh_hid_usage.h
+stm32f767_game_console/usbh_hid_mouse.o: \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Class\HID\Src\usbh_hid_mouse.c \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_mouse.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Core\Inc\usbh_core.h \
+  ..\USB_HOST\Target\usbh_conf.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\string.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h \
+  ..\Core\Inc\stm32f7xx_hal_conf.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_rcc.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_def.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h \
+  ..\Drivers\CMSIS\Include\core_cm7.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Drivers\CMSIS\Include\cmsis_version.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  ..\Drivers\CMSIS\Include\mpu_armv7.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_rcc_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_exti.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_gpio.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_gpio_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_cortex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_i2c.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_i2c_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_hcd.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_ll_usb.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  ..\Third\tinyusb\src\tusb.h ..\Third\tinyusb\src\common\tusb_common.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\inttypes.h \
+  ..\Third\tinyusb\src\tusb_option.h \
+  ..\Third\tinyusb\src\common\tusb_compiler.h \
+  ..\Third\tinyusb\tusb_config.h ..\Third\tinyusb\src\common\tusb_mcu.h \
+  ..\Third\tinyusb\src\common\tusb_verify.h \
+  ..\Third\tinyusb\src\common\tusb_types.h \
+  ..\Third\tinyusb\src\common\tusb_debug.h \
+  ..\Third\tinyusb\src\osal\osal.h \
+  ..\Third\tinyusb\src\osal\osal_freertos.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM7\r0p1\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
+  ..\Third\tinyusb\src\common\tusb_fifo.h \
+  ..\Third\tinyusb\src\host\usbh.h \
+  ..\Third\tinyusb\src\class\hid\hid_host.h \
+  ..\Third\tinyusb\src\class\hid\hid.h ..\Third\tinyusb\bsp\board_api.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Core\Inc\usbh_def.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Core\Inc\usbh_ioreq.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Core\Inc\usbh_pipes.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Core\Inc\usbh_ctlreq.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_keybd.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_parser.h \
+  ..\Middlewares\ST\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_usage.h

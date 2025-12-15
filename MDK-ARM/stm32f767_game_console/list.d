@@ -1,12 +1,13 @@
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
-stm32f767_game_console\list.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-stm32f767_game_console\list.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
-stm32f767_game_console\list.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
-stm32f767_game_console\list.o: ../Core/Inc/FreeRTOSConfig.h
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/portmacro.h
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-stm32f767_game_console\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+stm32f767_game_console/list.o: \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\list.c \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM7\r0p1\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h

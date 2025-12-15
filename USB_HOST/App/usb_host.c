@@ -85,7 +85,7 @@ int8_t Find_Mouse_Interface(USBH_HandleTypeDef *phost)
         USBH_InterfaceDescTypeDef *itf = &cfg->Itf_Desc[i];
 
         if (itf->bInterfaceClass == USB_HID_CLASS &&
-            itf->bInterfaceProtocol == 0x02) // 0x02 ÎªÊó±êÐ­Òé
+            itf->bInterfaceProtocol == 0x02) // 0x02 Îªï¿½ï¿½ï¿½Ð­ï¿½ï¿½
         {
             return itf->bInterfaceNumber;
         }
@@ -130,6 +130,8 @@ void MX_USB_HOST_Init(void)
 static void USBH_UserProcess  (USBH_HandleTypeDef *phost, uint8_t id)
 {
   /* USER CODE BEGIN CALL_BACK_1 */
+	
+	int8_t mouse_if = Find_Mouse_Interface(phost);
   switch(id)
   {
   case HOST_USER_SELECT_CONFIGURATION:
@@ -145,12 +147,10 @@ static void USBH_UserProcess  (USBH_HandleTypeDef *phost, uint8_t id)
   Appli_state = APPLICATION_READY;
   printf("USB device ready\r\n");
   Scan_All_HID_Interfaces(phost);
-  int8_t mouse_if = Find_Mouse_Interface(phost);
   if (mouse_if >= 0)
   {
       printf("Select Mouse Interface: %d\r\n", mouse_if);
       USBH_SelectInterface(phost, mouse_if);
-      USBH_HID_InterfaceInit(phost, 0);
   }
   break;
 

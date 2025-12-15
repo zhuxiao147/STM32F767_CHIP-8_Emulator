@@ -35,6 +35,10 @@ extern "C" {
 #include "stdio.h"	
 #include "string.h"
 #include "stdint.h"
+#include "stdbool.h"
+
+#include "tusb.h"
+#include "bsp/board_api.h"
 
 /* USER CODE END Includes */
 

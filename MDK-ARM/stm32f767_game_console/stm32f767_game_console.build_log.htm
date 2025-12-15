@@ -9,12 +9,12 @@ License Information: 111 1909961237@qq.com, 111, LIC=ATTQ1-CC8P3-9UX4U-SYVXQ-N30
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
-Toolchain Path:  D:\keil5\ARM\ARM_Compiler_5.06u7\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+Toolchain Path:  D:\keil5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
 CPU DLL:         SARMCM3.DLL V5.38.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
 Target DLL:      CMSIS_AGDI.dll V1.33.15.0
@@ -22,14 +22,15 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 D:\GITHUB\game_console\stm32f767_game_console\MDK-ARM\stm32f767_game_console.uvprojx
-Project File Date:  12/14/2025
+Project File Date:  12/15/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil5\ARM\ARM_Compiler_5.06u7\Bin'
+*** Using Compiler 'V6.19', folder: 'D:\keil5\ARM\ARMCLANG\Bin'
 Build target 'stm32f767_game_console'
-compiling usbh_hid.c...
+compiling family.c...
+compiling freertos.c...
 linking...
-Program Size: Code=40264 RO-data=1028 RW-data=240 ZI-data=41200  
+Program Size: Code=53864 RO-data=2792 RW-data=176 ZI-data=44504  
 FromELF: creating hex file...
 "stm32f767_game_console\stm32f767_game_console.axf" - 0 Error(s), 0 Warning(s).
 
@@ -54,7 +55,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:6.1.1
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

@@ -52,7 +52,7 @@ extern "C" {
   */
 
 #define HID_MIN_POLL                                10U
-#define HID_REPORT_SIZE                             16U
+//#define HID_REPORT_SIZE                             16U
 #define HID_MAX_USAGE                               10U
 #define HID_MAX_NBR_REPORT_FMT                      10U
 #define HID_QUEUE_SIZE                              10U
@@ -246,7 +246,6 @@ HID_HandleTypeDef;
 
 /* HID Class Codes */
 #define USB_HID_CLASS                                 0x03U
-
 
 /* Interface Descriptor field values for HID Boot Protocol */
 #define HID_BOOT_CODE                                 0x01U

@@ -35,6 +35,11 @@ extern "C" {
 #include "stdio.h"	
 #include "string.h"
 #include "stdint.h"
+#include "stdbool.h"
+
+#include "tusb.h"
+
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
