@@ -1,38 +1,73 @@
-stm32f767_game_console\usb_otg.o: ../Core/Src/usb_otg.c
-stm32f767_game_console\usb_otg.o: ../Core/Inc/usb_otg.h
-stm32f767_game_console\usb_otg.o: ../Core/Inc/main.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
-stm32f767_game_console\usb_otg.o: ../Core/Inc/stm32f7xx_hal_conf.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Include/core_cm7.h
-stm32f767_game_console\usb_otg.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Include/cmsis_version.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Include/mpu_armv7.h
-stm32f767_game_console\usb_otg.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-stm32f767_game_console\usb_otg.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc_ex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_exti.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio_ex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_hcd.h
-stm32f767_game_console\usb_otg.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h
-stm32f767_game_console\usb_otg.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
-stm32f767_game_console\usb_otg.o: D:\keil5\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+stm32f767_game_console/usb_otg.o: ..\Core\Src\usb_otg.c \
+  ..\Core\Inc\usb_otg.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h \
+  ..\Core\Inc\stm32f7xx_hal_conf.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_rcc.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_def.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h \
+  ..\Drivers\CMSIS\Include\core_cm7.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Drivers\CMSIS\Include\cmsis_version.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  ..\Drivers\CMSIS\Include\mpu_armv7.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_rcc_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_exti.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_gpio.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_gpio_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_cortex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_sram.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_ll_fmc.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_nor.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_i2c.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_i2c_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_tim.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_tim_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart_ex.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_hcd.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_ll_usb.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  ..\Middlewares\Third_Party\tinyusb\src\tusb.h \
+  ..\Middlewares\Third_Party\tinyusb\src\common\tusb_common.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\inttypes.h \
+  ..\Middlewares\Third_Party\tinyusb\src\tusb_option.h \
+  ..\Middlewares\Third_Party\tinyusb\src\common\tusb_compiler.h \
+  ..\Middlewares\Third_Party\tinyusb\tusb_config.h \
+  ..\Middlewares\Third_Party\tinyusb\src\common\tusb_mcu.h \
+  ..\Middlewares\Third_Party\tinyusb\src\common\tusb_verify.h \
+  ..\Middlewares\Third_Party\tinyusb\src\common\tusb_types.h \
+  ..\Middlewares\Third_Party\tinyusb\src\common\tusb_debug.h \
+  ..\Middlewares\Third_Party\tinyusb\src\osal\osal.h \
+  ..\Middlewares\Third_Party\tinyusb\src\osal\osal_freertos.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM7\r0p1\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
+  ..\Middlewares\Third_Party\tinyusb\src\common\tusb_fifo.h \
+  ..\Middlewares\Third_Party\tinyusb\src\host\usbh.h \
+  ..\Middlewares\Third_Party\tinyusb\src\class\hid\hid_host.h \
+  ..\Middlewares\Third_Party\tinyusb\src\class\hid\hid.h \
+  ..\Middlewares\Third_Party\tinyusb\bsp\board_api.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h

@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "hid_report_parser.h"
 #include "app_init.h"
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -107,7 +108,7 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* creation of defaultTask */
-  //defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
 
@@ -134,7 +135,6 @@ void MX_FREERTOS_Init(void) {
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-  /* init code for USB_HOST */
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
   for (;;)
@@ -149,7 +149,11 @@ void StartDefaultTask(void *argument)
 void Game_Task(void *argument)
 {
     uint8_t keyupflag = 0;
+    uint8_t tmpstr[32];
     hid_input_event_t event;
+    LCD_Display_Dir(1);
+    LCD_ShowString(10,40,260,32,32,(uint8_t*)"Apollo STM32F7"); 
+		memset(tmpstr, 0, 32);
     while (1)
     {
         if (xQueueReceive(HIDInputEventQueue, &event, portMAX_DELAY) == pdTRUE)
@@ -164,10 +168,16 @@ void Game_Task(void *argument)
                         keyupflag = 0;
                         if (event.keyboard.modifier & HID_KEYBOARD_MODIFIER_SHIFT)
                         {
+                            LCD_Clear(WHITE);
+														sprintf((char*)tmpstr,"word :%c",keymap_shift[event.keyboard.keycode[i]]);
+                            LCD_ShowString(10,40,260,32,32,(uint8_t*)tmpstr); 
                             printf("Game_Task HID_EVT_KEYBOARD %c\n", keymap_shift[event.keyboard.keycode[i]]);
                         }
                         else
                         {
+                            LCD_Clear(WHITE);
+                            sprintf((char*)tmpstr,"word :%c",keymap[event.keyboard.keycode[i]]);
+                            LCD_ShowString(10,40,260,32,32,(uint8_t*)tmpstr); 
                             printf("Game_Task HID_EVT_KEYBOARD %c\n", keymap[event.keyboard.keycode[i]]);
                         }
                     }

@@ -20,12 +20,14 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "usart.h"
-#include "usb_host.h"
+#include "usb_otg.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "cli.h"
+#include "app_init.h"
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,11 +72,11 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	LCD_MPU_Config(); 
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
-  MPU_Config();
+  //MPU_Config();
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -95,9 +97,16 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART1_UART_Init();
+  MX_USB_OTG_FS_HCD_Init();
   /* USER CODE BEGIN 2 */
+  LCD_Init();
   LED_Init();
+  HID_EventQueue_Init();
+
   /* USER CODE END 2 */
+
+  /* Init scheduler */
+  osKernelInitialize();
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
   MX_FREERTOS_Init();
@@ -111,22 +120,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    if (USART_RX_LEN > 0)
-    {
-      uint32_t retlen = cli_parser(USART_RX_BUF, USART_RX_LEN, USART_TX_BUF, USART_BUF_MAXLEN);
-      if (retlen > 0)
-      {
-        printf("%s", USART_TX_BUF);
-      }
-      memset(USART_RX_BUF, 0, USART_BUF_MAXLEN);
-      memset(USART_TX_BUF, 0, USART_BUF_MAXLEN);
-      USART_RX_LEN = 0;
-    }
-    else
-    {
-      HAL_Delay(1000);
-      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
-    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -222,6 +215,28 @@ void MPU_Config(void)
   /* Enables the MPU */
   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
 
+}
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM6 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM6)
+  {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
 }
 
 /**
