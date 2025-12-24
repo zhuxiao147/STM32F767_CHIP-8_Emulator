@@ -22,9 +22,8 @@
 #include "fmc.h"
 
 /* USER CODE BEGIN 0 */
-#include "gpio.h"
-#include "lcd.h"
 extern void BSP_SDRAM_Init(void);
+
 /* USER CODE END 0 */
 
 SDRAM_HandleTypeDef hsdram1;
@@ -33,24 +32,13 @@ SDRAM_HandleTypeDef hsdram1;
 void MX_FMC_Init(void)
 {
   /* USER CODE BEGIN FMC_Init 0 */
-  GPIO_InitTypeDef GPIO_Initure;
-  __HAL_RCC_GPIOB_CLK_ENABLE();			//¿ªÆôGPIOBÊ±ÖÓ
-  GPIO_Initure.Pin = GPIO_PIN_5;          //PB5,±³¹â¿ØÖÆ
-  GPIO_Initure.Mode = GPIO_MODE_OUTPUT_PP; //ÍÆÍìÊä³ö
-  GPIO_Initure.Pull = GPIO_PULLUP;        //ÉÏÀ­
-  GPIO_Initure.Speed = GPIO_SPEED_HIGH;   //¸ßËÙ
-  HAL_GPIO_Init(GPIOB, &GPIO_Initure);
+
   /* USER CODE END FMC_Init 0 */
 
   FMC_SDRAM_TimingTypeDef SdramTiming = {0};
 
   /* USER CODE BEGIN FMC_Init 1 */
-//  __HAL_RCC_GPIOB_CLK_ENABLE();			//ï¿½ï¿½ï¿½ï¿½GPIOBÊ±ï¿½ï¿½
-//  GPIO_Initure.Pin = GPIO_PIN_5;          //PB5,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
-//  GPIO_Initure.Mode = GPIO_MODE_OUTPUT_PP; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
-//  GPIO_Initure.Pull = GPIO_PULLUP;        //ï¿½ï¿½ï¿½ï¿½
-//  GPIO_Initure.Speed = GPIO_SPEED_HIGH;   //ï¿½ï¿½ï¿½ï¿½
-//  HAL_GPIO_Init(GPIOB, &GPIO_Initure);
+
   /* USER CODE END FMC_Init 1 */
 
   /** Perform the SDRAM1 memory initialization sequence
@@ -74,7 +62,7 @@ void MX_FMC_Init(void)
   SdramTiming.RowCycleDelay = 7;
   SdramTiming.WriteRecoveryTime = 5;
   SdramTiming.RPDelay = 2;
-  SdramTiming.RCDDelay = 2;
+  SdramTiming.RCDDelay = 16;
 
   if (HAL_SDRAM_Init(&hsdram1, &SdramTiming) != HAL_OK)
   {
@@ -83,21 +71,12 @@ void MX_FMC_Init(void)
 
   /* USER CODE BEGIN FMC_Init 2 */
   BSP_SDRAM_Init();
+  // uint32_t* p = (uint32_t *)0xC0000000;;
+  // p[0] = 0x55aa55aa;
+  // p[1] = 0xaaffaaff;
+  // printf("p[0] = 0x%08x\n", p[0]);
+  // printf("p[1] = 0x%08x\n", p[1]);
 
-  LCD_WR_REG(0xD3);
-
-  lcddev.id = LCD_RD_DATA();  /* dummy read */
-  lcddev.id = LCD_RD_DATA();  /* ¶Áµ½0X00 */
-  lcddev.id = LCD_RD_DATA();  /* ¶ÁÈ¡0X77 */
-  lcddev.id <<= 8;
-  lcddev.id |= LCD_RD_DATA(); /* ¶ÁÈ¡0X96 */
-
-  LCD_LED(1);	
-//  uint32_t *p = (uint32_t *)0xC0000000;
-//  p[0] = 0xAAAAAAAA;
-//  p[1] = 0x55555555;
-//  printf("p[0] = 0x%08X\n", p[0]);
-//  printf("p[1] = 0x%08X\n", p[1]);
   /* USER CODE END FMC_Init 2 */
 }
 

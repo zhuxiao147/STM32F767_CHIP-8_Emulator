@@ -693,7 +693,7 @@ void LCD_Init(void)
     lcddev.id <<= 8;
     lcddev.id |= LCD_RD_DATA();  	//读取41
 
-    printf(" LCD ID:%x\r\n", lcddev.id); //打印LCD ID
+    //printf(" LCD ID:%x\r\n", lcddev.id); //打印LCD ID
 
     if (lcddev.id == 0X9341)	//9341初始化
     {
@@ -2319,9 +2319,7 @@ void LCD_Init(void)
         FMC_Bank1E->BWTR[0] |= 5 << 8; 		//数据保存时间(DATAST)为4.6ns*4个HCLK=21ns
     }
 
-    LCD_Display_Dir(0);		//默认为竖屏
     LCD_LED(1);				//点亮背光
-    LCD_Clear(WHITE);
 }
 
 //清屏函数

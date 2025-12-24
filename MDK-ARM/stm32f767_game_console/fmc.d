@@ -23,16 +23,14 @@ stm32f767_game_console/fmc.o: ..\Core\Src\fmc.c ..\Core\Inc\fmc.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma_ex.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_cortex.h \
-  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma2d.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash_ex.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_sram.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_ll_fmc.h \
+  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_nor.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_sdram.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_i2c.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_i2c_ex.h \
-  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_ltdc.h \
-  ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_ltdc_ex.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr_ex.h \
   ..\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_tim.h \
@@ -72,6 +70,4 @@ stm32f767_game_console/fmc.o: ..\Core\Src\fmc.c ..\Core\Inc\fmc.h \
   ..\Middlewares\Third_Party\tinyusb\src\class\hid\hid_host.h \
   ..\Middlewares\Third_Party\tinyusb\src\class\hid\hid.h \
   ..\Middlewares\Third_Party\tinyusb\bsp\board_api.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h \
-  ..\Core\Inc\gpio.h ..\APP\display\lcd.h \
-  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h

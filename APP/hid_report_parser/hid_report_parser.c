@@ -35,7 +35,7 @@ hid_input_event_type_t hid_parse_report(uint8_t *report, uint32_t len, hid_input
         event->keyboard.modifier = report[0];
         event->keyboard.reserved = 0;
         memcpy(event->keyboard.keycode, &report[2], 6);
-        printf("HID_EVT_KEYBOARD\n");
+        //printf("HID_EVT_KEYBOARD\n");
         return HID_EVT_KEYBOARD;
     }
     else if (event->type == HID_EVT_MOUSE)
@@ -45,7 +45,7 @@ hid_input_event_type_t hid_parse_report(uint8_t *report, uint32_t len, hid_input
         event->mouse.y = report[2];
         event->mouse.wheel = report[3];
         event->mouse.buttons = report[0];
-        printf("HID_EVT_MOUSE\n");
+        //printf("HID_EVT_MOUSE\n");
         return HID_EVT_MOUSE;
     }
     else

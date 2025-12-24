@@ -28,6 +28,7 @@
 #include "hid_report_parser.h"
 #include "app_init.h"
 #include "lcd.h"
+#include "chip8.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,7 +43,9 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+chip8_t chip8_emulator;
+uint16_t chip8_whitecolor[64] = {WHITE};
+uint16_t chip8_blackcolor[64] = {BLACK};
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -58,22 +61,26 @@ osThreadId gameTaskHandle;
 const osThreadAttr_t gameTask_attributes = {
   .name = "gameTask",
   .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal,
-};
-/* USER CODE END Variables */
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+
+osThreadId hidParserTaskHandle;
+const osThreadAttr_t hidParserTask_attributes = {
+  .name = "hidParserTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal,
+};
+
+/* USER CODE END Variables */
+/* Definitions for defaultTask */
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 
 void Game_Task(void *argument);
+void HID_parser_task(void *argument);
 void TinyUSB_Task(void *argument);
+
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -108,12 +115,13 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  //defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
 
   tinyUSBTaskHandle = osThreadNew(TinyUSB_Task, NULL, &tinyUSBTask_attributes);
   gameTaskHandle = osThreadNew(Game_Task, NULL, &gameTask_attributes);
+  hidParserTaskHandle = osThreadNew(HID_parser_task, NULL, &hidParserTask_attributes);
   //osThreadDef(xboxTask, Xbox_Task, osPriorityNormal, 0, 1024);
   //osThreadCreate(osThread(xboxTask), NULL);
 
@@ -148,12 +156,45 @@ void StartDefaultTask(void *argument)
 /* USER CODE BEGIN Application */
 void Game_Task(void *argument)
 {
-    uint8_t keyupflag = 0;
-    uint8_t tmpstr[32];
+    // Initialize the CHIP8 emulator
+    chip8_init(&chip8_emulator);
+    chip8_load_rom(&chip8_emulator, RussianRouletteCarmeloCortez1978, sizeof(RussianRouletteCarmeloCortez1978));
+    memset(chip8_whitecolor, 0xFFFFF, sizeof(chip8_whitecolor));
+    memset(chip8_blackcolor, 0x00000, sizeof(chip8_blackcolor));
+    // Set the display direction to vertical
+    LCD_Display_Dir(1);  
+    LCD_ShowString(10,40,260,32,32,(uint8_t*)"CHIP8 EMULATOR"); 
+    LCD_Clear(BLACK);
+    while (1)
+    {
+        chip8_step(&chip8_emulator);
+        if (chip8_emulator.draw_flag)
+        {
+          /* code */
+          for (int y = 0; y < 32; y++)
+          {
+            for (int x = 0; x < 64; x++)
+            {
+              if (chip8_emulator.gfx[y*64+x])
+              {
+                LCD_Color_Fill(x*multi_lcd, y*multi_lcd, x*multi_lcd+multi_lcd, y*multi_lcd+multi_lcd, chip8_whitecolor);
+              }
+              else
+              {
+                LCD_Color_Fill(x*multi_lcd, y*multi_lcd, x*multi_lcd+multi_lcd, y*multi_lcd+multi_lcd, chip8_blackcolor);
+              }
+              
+            }
+          }
+          chip8_emulator.draw_flag = 0;
+        }
+    }
+}
+
+void HID_parser_task(void *argument)
+{
     hid_input_event_t event;
-    LCD_Display_Dir(1);
-    LCD_ShowString(10,40,260,32,32,(uint8_t*)"Apollo STM32F7"); 
-		memset(tmpstr, 0, 32);
+    uint8_t keyupflag = 0;
     while (1)
     {
         if (xQueueReceive(HIDInputEventQueue, &event, portMAX_DELAY) == pdTRUE)
@@ -166,31 +207,20 @@ void Game_Task(void *argument)
                     if (event.keyboard.keycode[i] != 0)
                     {   
                         keyupflag = 0;
-                        if (event.keyboard.modifier & HID_KEYBOARD_MODIFIER_SHIFT)
-                        {
-                            LCD_Clear(WHITE);
-														sprintf((char*)tmpstr,"word :%c",keymap_shift[event.keyboard.keycode[i]]);
-                            LCD_ShowString(10,40,260,32,32,(uint8_t*)tmpstr); 
-                            printf("Game_Task HID_EVT_KEYBOARD %c\n", keymap_shift[event.keyboard.keycode[i]]);
-                        }
-                        else
-                        {
-                            LCD_Clear(WHITE);
-                            sprintf((char*)tmpstr,"word :%c",keymap[event.keyboard.keycode[i]]);
-                            LCD_ShowString(10,40,260,32,32,(uint8_t*)tmpstr); 
-                            printf("Game_Task HID_EVT_KEYBOARD %c\n", keymap[event.keyboard.keycode[i]]);
-                        }
+                        chip8_set_key(&chip8_emulator, event.keyboard.keycode[i], 1);
+                        //printf("Game_Task HID_EVT_KEYBOARD %c\n", keymap[event.keyboard.keycode[i]]);
                     }
                 }
                 if (keyupflag)
                 {
-                  printf("Game_Task KEY UP\n");
+                  chip8_clear_key(&chip8_emulator);
+                  //printf("Game_Task KEY UP\n");
                 }
             }
-            else if (event.type == HID_EVT_MOUSE)
-            {
-                printf("Game_Task HID_EVT_MOUSE x:%d y:%d wheel:%d buttons:%d\n", event.mouse.x, event.mouse.y, event.mouse.wheel, event.mouse.buttons);
-            }
+            // else if (event.type == HID_EVT_MOUSE)
+            // {
+            //     printf("Game_Task HID_EVT_MOUSE x:%d y:%d wheel:%d buttons:%d\n", event.mouse.x, event.mouse.y, event.mouse.wheel, event.mouse.buttons);
+            // }
         }
     }
 }
