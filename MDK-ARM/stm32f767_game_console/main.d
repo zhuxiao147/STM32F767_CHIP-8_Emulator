@@ -74,7 +74,6 @@ stm32f767_game_console/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.h \
   ..\Core\Inc\rng.h ..\Core\Inc\tim.h ..\Core\Inc\usart.h \
-  ..\Core\Inc\usb_otg.h ..\Core\Inc\gpio.h ..\APP\cli\cli.h \
-  ..\APP\app_init\app_init.h ..\APP\display\lcd.h ..\APP\display\sys.h \
-  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h ..\Utils\malloc.h \
-  ..\APP\chip8\chip8.h
+  ..\Core\Inc\usb_otg.h ..\Core\Inc\gpio.h ..\APP\app_init\app_init.h \
+  ..\APP\display\lcd.h ..\APP\display\sys.h \
+  D:\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h ..\APP\chip8\chip8.h

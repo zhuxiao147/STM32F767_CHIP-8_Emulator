@@ -188,53 +188,14 @@ void LCD_DisplayOff(void)
 //Ypos:纵坐标
 void LCD_SetCursor(u16 Xpos, u16 Ypos)
 {
-    if (lcddev.id == 0X1963)
-    {
-        if (lcddev.dir == 0)   //x坐标需要变换
-        {
-            Xpos = lcddev.width - 1 - Xpos;
-            LCD_WR_REG(lcddev.setxcmd);
-            LCD_WR_DATA(0);
-            LCD_WR_DATA(0);
-            LCD_WR_DATA(Xpos >> 8);
-            LCD_WR_DATA(Xpos & 0XFF);
-        }
-        else
-        {
-            LCD_WR_REG(lcddev.setxcmd);
-            LCD_WR_DATA(Xpos >> 8);
-            LCD_WR_DATA(Xpos & 0XFF);
-            LCD_WR_DATA((lcddev.width - 1) >> 8);
-            LCD_WR_DATA((lcddev.width - 1) & 0XFF);
-        }
 
-        LCD_WR_REG(lcddev.setycmd);
-        LCD_WR_DATA(Ypos >> 8);
-        LCD_WR_DATA(Ypos & 0XFF);
-        LCD_WR_DATA((lcddev.height - 1) >> 8);
-        LCD_WR_DATA((lcddev.height - 1) & 0XFF);
-
-    }
-    else if (lcddev.id == 0X5510)
-    {
-        LCD_WR_REG(lcddev.setxcmd);
-        LCD_WR_DATA(Xpos >> 8);
-        LCD_WR_REG(lcddev.setxcmd + 1);
-        LCD_WR_DATA(Xpos & 0XFF);
-        LCD_WR_REG(lcddev.setycmd);
-        LCD_WR_DATA(Ypos >> 8);
-        LCD_WR_REG(lcddev.setycmd + 1);
-        LCD_WR_DATA(Ypos & 0XFF);
-    }
-    else     // 9341/5310/7789/7796/9806 等设置坐标
-    {
-        LCD_WR_REG(lcddev.setxcmd);
-        LCD_WR_DATA(Xpos >> 8);
-        LCD_WR_DATA(Xpos & 0XFF);
-        LCD_WR_REG(lcddev.setycmd);
-        LCD_WR_DATA(Ypos >> 8);
-        LCD_WR_DATA(Ypos & 0XFF);
-    }
+    LCD_WR_REG(lcddev.setxcmd);
+    LCD_WR_DATA(Xpos >> 8);
+    LCD_WR_DATA(Xpos & 0XFF);
+    LCD_WR_REG(lcddev.setycmd);
+    LCD_WR_DATA(Ypos >> 8);
+    LCD_WR_DATA(Ypos & 0XFF);
+    
 }
 
 //设置LCD的自动扫描方向(对RGB屏无效)

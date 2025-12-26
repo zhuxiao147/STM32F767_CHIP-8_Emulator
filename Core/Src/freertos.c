@@ -166,7 +166,10 @@ void Game_Task(void *argument)
     LCD_Display_Dir(1);  
     LCD_ShowString(10,40,260,32,32,(uint8_t*)"CHIP8 EMULATOR"); 
     LCD_Clear(BLACK);
+
     HAL_TIM_Base_Start_IT(&htim7);
+    TickType_t xLastWakeTime = xTaskGetTickCount(); // 获取当前 Tick
+    const TickType_t xFrequency = pdMS_TO_TICKS(16); // 16ms 周期
     while (1)
     {
         chip8_step(&chip8_emulator);
@@ -177,17 +180,17 @@ void Game_Task(void *argument)
           {
             for (int x = 0; x < 64; x++)
             {
-              if (chip8_emulator.gfx[y*64+x])
+              if (chip8_emulator.gfx[y*64+x] != chip8_emulator.lastgfx[y*64+x])
               {
-                LCD_Color_Fill(x*multi_lcd, y*multi_lcd, x*multi_lcd+multi_lcd, y*multi_lcd+multi_lcd, chip8_whitecolor);
-              }
-              else
-              {
-                LCD_Color_Fill(x*multi_lcd, y*multi_lcd, x*multi_lcd+multi_lcd, y*multi_lcd+multi_lcd, chip8_blackcolor);
-              }
-              
+                chip8_emulator.lastgfx[y*64+x] = chip8_emulator.gfx[y*64+x];
+                if (chip8_emulator.gfx[y*64+x])
+                  LCD_Color_Fill(x*multi_lcd, y*multi_lcd, x*multi_lcd+multi_lcd, y*multi_lcd+multi_lcd, chip8_whitecolor);
+                else
+                  LCD_Color_Fill(x*multi_lcd, y*multi_lcd, x*multi_lcd+multi_lcd, y*multi_lcd+multi_lcd, chip8_blackcolor);
+              } 
             }
           }
+          vTaskDelayUntil(&xLastWakeTime, xFrequency);   //刷新频率为60帧
           chip8_emulator.draw_flag = 0;
         }
     }

@@ -54,13 +54,10 @@
 "stm32f767_game_console\usbh.o"
 "stm32f767_game_console\dwc2_common.o"
 "stm32f767_game_console\hcd_dwc2.o"
-"stm32f767_game_console\cli.o"
-"stm32f767_game_console\cli_cmds.o"
 "stm32f767_game_console\app_init.o"
 "stm32f767_game_console\hid_report_parser.o"
 "stm32f767_game_console\lcd.o"
 "stm32f767_game_console\sys.o"
-"stm32f767_game_console\bsp_sdram.o"
 "stm32f767_game_console\chip8.o"
 --library_type=microlib --strict --scatter "stm32f767_game_console\stm32f767_game_console.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

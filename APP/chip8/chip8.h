@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define multi_lcd (6)
+#define multi_lcd (7)
 typedef struct
 {
     uint8_t  chip8_rom[4096];
@@ -16,16 +16,16 @@ typedef struct
 
     volatile uint8_t  delay_timer;
     volatile uint8_t  sound_timer;
-    volatile uint8_t  draw_flag;        
+    volatile uint8_t  draw_flag;     
 
-    uint8_t  gfx[64 * 32];    
+    uint8_t  gfx[64 * 32];   
+    uint8_t  lastgfx[64 * 32];     
     volatile uint8_t  keypad[16];   
 
 }chip8_t;
 
 extern uint8_t testopcode[478];
 extern uint8_t testkeypad[913];
-extern unsigned char RussianRouletteCarmeloCortez1978[156]; 
 extern unsigned char Pong1player[246];
 
 extern chip8_t chip8_emulator;

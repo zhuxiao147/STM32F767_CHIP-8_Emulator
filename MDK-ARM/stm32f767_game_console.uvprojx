@@ -82,7 +82,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
-            <RunUserProg2>1</RunUserProg2>
+            <RunUserProg2>0</RunUserProg2>
             <UserProg1Name></UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;../APP;../APP/cli;../Utils;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/tinyusb/src;../Middlewares/Third_Party/tinyusb;../APP/app_init;../APP/hid_report_parser;../APP/chip8;../APP/display</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;../APP;../APP/cli;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/tinyusb/src;../Middlewares/Third_Party/tinyusb;../APP/app_init;../APP/hid_report_parser;../APP/chip8;../APP/display</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1831,16 +1831,6 @@
           <GroupName>APP</GroupName>
           <Files>
             <File>
-              <FileName>cli.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\cli\cli.c</FilePath>
-            </File>
-            <File>
-              <FileName>cli_cmds.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\cli\cli_cmds.c</FilePath>
-            </File>
-            <File>
               <FileName>app_init.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\app_init\app_init.c</FilePath>
@@ -1860,15 +1850,7 @@
               <FileType>1</FileType>
               <FilePath>..\APP\display\sys.c</FilePath>
             </File>
-            <File>
-              <FileName>bsp_sdram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\app_init\bsp_sdram.c</FilePath>
-            </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>Utils</GroupName>
         </Group>
         <Group>
           <GroupName>APP/CHIP8</GroupName>

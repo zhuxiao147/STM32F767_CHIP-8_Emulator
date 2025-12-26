@@ -27,10 +27,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "cli.h"
 #include "app_init.h"
 #include "lcd.h"
-#include "malloc.h"
 #include "chip8.h"
 /* USER CODE END Includes */
 
@@ -77,11 +75,9 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
 	LCD_MPU_Config(); 
-  //FMC_MPU_Config();
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
-  //MPU_Config();
 
   /* MCU Configuration--------------------------------------------------------*/
 
