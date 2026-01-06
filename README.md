@@ -41,21 +41,22 @@
 
 ---
 
-## 时间系统设计
-
-CHIP-8 对时间有明确语义，本项目严格区分三种“节奏”：
-
-| 模块 | 频率 | 实现方式 |
-|----|----|----|
-| CPU 指令执行 | 可配置（~600 instr/s） | 主循环调度 |
-| Delay / Sound Timer | **60 Hz（规范）** | TIM7 |
-| 显示刷新 | ~60 Hz |
-
 ## 输入系统（USB HID）
 
 - 使用 STM32 USB Host
 - 支持 HID 键盘 / 鼠标
 - HID 键值映射为 CHIP-8 的 16 键输入
 
+---
+
+## 输出系统（LCD TFT）
+- 使用3.5寸 TFT LCD模块
+- 显示刷新 | ~60 Hz |
+
+## 效果图：
+-测试结果
+<img width="720" height="540" alt="924b793493b8468abe73c640ebbfe5e8" src="https://github.com/user-attachments/assets/3ece0322-5f91-48d4-b07a-3885f3ae6283" />
+-运行《pong》
+https://github.com/user-attachments/assets/6743f598-599f-4694-bb5a-81368ab212d6
 
 
